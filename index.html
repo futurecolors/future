@@ -12,11 +12,11 @@
     <script src="js/future.js"></script>
 </head>
 <body ng-controller="glowController" ng-init="initialize()">
-    <div class="future-glow clearfix">
+    <div class="future-glow clearfix" style="opacity: {{ opacity }}">
         <div class="future-glow__tick" ng-repeat="item in glow"
              style="width: {{ item.width }}px;
                     height: {{ item.heigth }}px;
-                    background: hsl({{ item.hue }}, {{ item.saturation }}%, {{ item.lightness }}%);"></div>
+                    background: {{ item.background }};"></div>
     </div>
     <div class="container">
         <div class="row">
@@ -28,6 +28,13 @@
                         <div class="col-sm-9">
                             <input class="input-sm" type="text" ng-model="widthFrom" size="2" /> &mdash;
                             <input class="input-sm" type="text" ng-model="widthTo" size="2" /> &nbsp;
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Высота</label>
+                        <div class="col-sm-9">
+                            <input class="input-sm" type="text" ng-model="heightFrom" size="2" /> &mdash;
+                            <input class="input-sm" type="text" ng-model="heightTo" size="2" /> &nbsp;
                         </div>
                     </div>
                     <div class="form-group">
@@ -51,6 +58,30 @@
                         <div class="col-sm-9">
                             <input class="input-sm" type="text" ng-model="lightnessFrom" size="3" /> &mdash;
                             <input class="input-sm" type="text" ng-model="lightnessTo" size="3" /> &nbsp;
+                            <span class="text-muted">От 0 до 100</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Прозрачность</label>
+                        <div class="col-sm-9">
+                            <input class="input-sm" type="text" ng-model="opacity" size="3" /> &nbsp;
+                            <span class="text-muted">От 0 до 1</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-3">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" ng-model="gradient" />
+                                    с градиентом
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Позиция осветления</label>
+                        <div class="col-sm-9">
+                            <input class="input-sm" type="text" ng-model="gradientPoint" size="3" /> &nbsp;
                             <span class="text-muted">От 0 до 100</span>
                         </div>
                     </div>

@@ -5,6 +5,7 @@
 }
 .future-glow__tick {
     display: inline-block;
+    vertical-align: top;
 }
 
 
