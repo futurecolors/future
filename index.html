@@ -40,31 +40,28 @@
                     <div class="form-group">
                         <label class="col-sm-3 control-label">Тон</label>
                         <div class="col-sm-9">
-                            <input class="input-sm" type="text" ng-model="hueFrom" size="3" /> &mdash;
-                            <input class="input-sm" type="text" ng-model="hueTo" size="3" /> &nbsp;
-                            <span class="text-muted">От 0 до 360</span>
+                            <input type="range" ng-model="hueFrom" min="0" max="360" />
+                            <input type="range" ng-model="hueTo" min="0" max="360" />
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">Насыщенность</label>
                         <div class="col-sm-9">
-                            <input class="input-sm" type="text" ng-model="saturationFrom" size="3" /> &mdash;
-                            <input class="input-sm" type="text" ng-model="saturationTo" size="3" /> &nbsp;
-                            <span class="text-muted">От 0 до 100</span>
+                            <input type="range" ng-model="saturationFrom" min="0" max="100" />
+                            <input type="range" ng-model="saturationTo" min="0" max="100" />
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">Светлота</label>
                         <div class="col-sm-9">
-                            <input class="input-sm" type="text" ng-model="lightnessFrom" size="3" /> &mdash;
-                            <input class="input-sm" type="text" ng-model="lightnessTo" size="3" /> &nbsp;
-                            <span class="text-muted">От 0 до 100</span>
+                            <input type="range" ng-model="lightnessFrom" min="0" max="100" />
+                            <input type="range" ng-model="lightnessTo" min="0" max="100" />
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">Прозрачность</label>
                         <div class="col-sm-9">
-                            <input class="input-sm" type="text" ng-model="opacity" size="3" /> &nbsp;
+                            <input type="text" ng-model="opacity" size="3" /> &nbsp;
                             <span class="text-muted">От 0 до 1</span>
                         </div>
                     </div>
@@ -81,7 +78,7 @@
                     <div class="form-group">
                         <label class="col-sm-3 control-label">Позиция осветления</label>
                         <div class="col-sm-9">
-                            <input class="input-sm" type="text" ng-model="gradientPoint" size="3" /> &nbsp;
+                            <input type="text" ng-model="gradientPoint" size="3" /> &nbsp;
                             <span class="text-muted">От 0 до 100</span>
                         </div>
                     </div>
