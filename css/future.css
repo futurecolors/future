@@ -1,3 +1,5 @@
+/** Свечение */
+
 .future-glow {
     overflow: hidden;
     margin-bottom: 50px;
@@ -6,6 +8,65 @@
 .future-glow__tick {
     display: inline-block;
     vertical-align: top;
+}
+
+
+/** Панель */
+
+.future-pane {
+    position: relative;
+}
+.future-pane__background {
+    position: relative;
+    background: #ccc;
+    border-radius: 3px;
+}
+.future-pane__inner-shadow {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.05) 100%);
+}
+.future-pane__outer-shadow {
+    position: absolute;
+    top: 30px;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    box-shadow: 0 -5px 35px rgba(0, 0, 0, 0.45);
+}
+.future-pane__label {
+    height: 50px;
+    margin-bottom: 15px;
+    padding-left: 12px;
+    line-height: 50px;
+    font-size: 32px;
+    color: rgba(255, 255, 255, 0.3);
+}
+.future-pane__content {
+    padding: 0 30px 20px;
+}
+
+
+/** Кнопка */
+
+.future-button {
+    display: inline-block;
+    text-decoration: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.05) 100%);
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.4) rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
+.future-button__wrapper {
+    display: inline-block;
+    margin: 3px;
+    padding: 5px 15px;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.7);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+    background: linear-gradient(to bottom, rgba(255,255,255,0.4) 0%,rgba(255,255,255,0.25) 100%);
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.4) rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
 }
 
 
