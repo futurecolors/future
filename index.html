@@ -12,80 +12,90 @@
     <script src="js/future.js"></script>
 </head>
 <body ng-controller="glowController" ng-init="initialize()">
-    <div class="future-glow clearfix" style="opacity: {{ opacity }}">
-        <div class="future-glow__tick" ng-repeat="item in glow"
-             style="width: {{ item.width }}px;
-                    height: {{ item.heigth }}px;
-                    background: {{ item.background }};"></div>
-    </div>
-    <div class="container">
+<div class="future-glow clearfix" style="opacity: {{ opacity }}">
+    <div class="future-glow__tick" ng-repeat="item in glow"
+         style="width: {{ item.width }}px;
+                 height: {{ item.heigth }}px;
+                 background: {{ item.background }};"></div>
+</div>
+<div class="container">
+    <h2>Паттерн</h2>
+
+    <form class="form-horizontal">
         <div class="row">
-            <div class="col-sm-6">
-                <h2>Паттерн</h2>
-                <form class="form-horizontal">
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label">Ширина</label>
-                        <div class="col-sm-9">
-                            <input class="input-sm" type="text" ng-model="widthFrom" size="2" /> &mdash;
-                            <input class="input-sm" type="text" ng-model="widthTo" size="2" /> &nbsp;
-                        </div>
+            <div class="col-sm-7">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Тон</label>
+
+                    <div class="col-sm-9">
+                        <input type="range" ng-model="hueFrom" min="0" max="360"/>
+                        <input type="range" ng-model="hueTo" min="0" max="360"/>
                     </div>
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label">Высота</label>
-                        <div class="col-sm-9">
-                            <input class="input-sm" type="text" ng-model="heightFrom" size="2" /> &mdash;
-                            <input class="input-sm" type="text" ng-model="heightTo" size="2" /> &nbsp;
-                        </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Насыщенность</label>
+
+                    <div class="col-sm-9">
+                        <input type="range" ng-model="saturationFrom" min="0" max="100"/>
+                        <input type="range" ng-model="saturationTo" min="0" max="100"/>
                     </div>
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label">Тон</label>
-                        <div class="col-sm-9">
-                            <input type="range" ng-model="hueFrom" min="0" max="360" />
-                            <input type="range" ng-model="hueTo" min="0" max="360" />
-                        </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Светлота</label>
+
+                    <div class="col-sm-9">
+                        <input type="range" ng-model="lightnessFrom" min="0" max="100"/>
+                        <input type="range" ng-model="lightnessTo" min="0" max="100"/>
                     </div>
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label">Насыщенность</label>
-                        <div class="col-sm-9">
-                            <input type="range" ng-model="saturationFrom" min="0" max="100" />
-                            <input type="range" ng-model="saturationTo" min="0" max="100" />
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label">Светлота</label>
-                        <div class="col-sm-9">
-                            <input type="range" ng-model="lightnessFrom" min="0" max="100" />
-                            <input type="range" ng-model="lightnessTo" min="0" max="100" />
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label">Прозрачность</label>
-                        <div class="col-sm-9">
-                            <input type="text" ng-model="opacity" size="3" /> &nbsp;
-                            <span class="text-muted">От 0 до 1</span>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-9 col-sm-offset-3">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" ng-model="gradient" />
-                                    с градиентом
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label">Позиция осветления</label>
-                        <div class="col-sm-9">
-                            <input type="text" ng-model="gradientPoint" size="3" /> &nbsp;
-                            <span class="text-muted">От 0 до 100</span>
-                        </div>
-                    </div>
-                </form>
+                </div>
             </div>
-            <div class="col-sm-6"></div>
+            <div class="col-sm-5">
+                <div class="form-group">
+                    <label class="col-sm-6 control-label">Ширина</label>
+
+                    <div class="col-sm-6">
+                        <input class="input-sm" type="text" ng-model="widthFrom" size="2"/> &mdash;
+                        <input class="input-sm" type="text" ng-model="widthTo" size="2"/> &nbsp;
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-6 control-label">Высота</label>
+
+                    <div class="col-sm-6">
+                        <input class="input-sm" type="text" ng-model="heightFrom" size="2"/> &mdash;
+                        <input class="input-sm" type="text" ng-model="heightTo" size="2"/> &nbsp;
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-6 control-label">Прозрачность</label>
+
+                    <div class="col-sm-6">
+                        <input type="text" ng-model="opacity" size="3"/> &nbsp;
+                        <span class="text-muted">От 0 до 1</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-6 col-sm-offset-6">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-model="gradient"/>
+                                с градиентом
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-6 control-label">Позиция осветления</label>
+
+                    <div class="col-sm-6">
+                        <input type="text" ng-model="gradientPoint" size="3"/> &nbsp;
+                        <span class="text-muted">От 0 до 100</span>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </form>
+</div>
+</div>
 </body>
 </html>
