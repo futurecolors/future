@@ -18,7 +18,7 @@
 }
 .future-pane__background {
     position: relative;
-    background: #ccc;
+    background: white;
     border-radius: 3px;
 }
 .future-pane__inner-shadow {
@@ -38,10 +38,40 @@
     padding-left: 12px;
     line-height: 50px;
     font-size: 32px;
+    color: rgba(0, 0, 0, 0.2);
+}
+.future-pane_invert .future-pane__label {
     color: rgba(255, 255, 255, 0.3);
 }
 .future-pane__content {
     padding: 0 30px 20px;
+    color: black;
+}
+.future-pane_invert .future-pane__content {
+    color: white;
+}
+
+
+/** Заголовок */
+
+.future-main-header {
+    margin: 28px 0 18px;
+    font-size: 26px;
+    font-weight: normal;
+}
+
+
+/** Метка */
+
+.future-label {
+    display: inline-block;
+    padding: 1px 7px;
+    vertical-align: middle;
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    font-size: 13px;
 }
 
 
