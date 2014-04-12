@@ -34,18 +34,18 @@ futureApp.controller('glowController', function($scope){
     });
 
     $scope.initialize = function(){
-        $scope.widthFrom = 2;
-        $scope.widthTo = 5;
+        $scope.widthFrom = 3;
+        $scope.widthTo = 7;
         $scope.heightFrom = 230;
         $scope.heightTo = 300;
-        $scope.hueFrom = 1;
-        $scope.hueTo = 50;
-        $scope.saturationFrom = 50;
-        $scope.saturationTo = 50;
-        $scope.lightnessFrom = 50;
-        $scope.lightnessTo = 50;
+        $scope.hueFrom = 340;
+        $scope.hueTo = 360;
+        $scope.saturationFrom = 75;
+        $scope.saturationTo = 85;
+        $scope.lightnessFrom = 40;
+        $scope.lightnessTo = 45;
         $scope.opacity = 1;
         $scope.gradient = true;
-        $scope.gradientPoint = 50;
+        $scope.gradientPoint = 0;
     };
 });
